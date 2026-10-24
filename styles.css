@@ -478,3 +478,21 @@ body.nav-open .hdr .burger span,body.nav-open .hdr:not(.sc) .burger span{backgro
 /* privacidad / 404: segunda parte del título sin itálica, en taupe */
 .legal-hero h1 em{font-style:normal;color:var(--taupe-l)}
 .nf h1 em{font-style:normal;color:var(--taupe)}
+
+/* áreas: fondo piedra para que las cards blancas se despeguen (Axel: «no se notan sus bordes») */
+#areas{background:var(--piedra)}
+.area{border-color:rgba(42,40,38,.16);box-shadow:0 22px 44px -30px rgba(42,40,38,.45)}
+.otros{background:#fff;border-top:1px solid rgba(42,40,38,.12);border-right:1px solid rgba(42,40,38,.12);border-bottom:1px solid rgba(42,40,38,.12)}
+@media (max-width:768px){.otros{border-left:1px solid rgba(42,40,38,.12)}}
+.otros{border:1px solid rgba(42,40,38,.16);border-left:3px solid var(--taupe);box-shadow:0 22px 44px -30px rgba(42,40,38,.45);margin-top:1.6rem}
+@media (max-width:768px){.otros{border-left:1px solid rgba(42,40,38,.16);border-top:3px solid var(--taupe)}}
+
+/* footer con el mismo fondo que el navbar al scrollear (blanco) */
+.ftr{background:#fff;border-top:1px solid var(--line)}
+
+/* hero: texto un poco más a la izquierda (lejos del corte) y la línea de los ítems solo del ancho de su contenido */
+.hero-modos{width:fit-content}
+@media (min-width:1025px){
+  .hero-txt{margin-left:clamp(-4rem,-3.2vw,-1rem);max-width:600px}
+}
+.hero .dots-tl{top:auto;bottom:70px;left:3%}
