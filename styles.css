@@ -496,3 +496,19 @@ body.nav-open .hdr .burger span,body.nav-open .hdr:not(.sc) .burger span{backgro
   .hero-txt{margin-left:clamp(-4rem,-3.2vw,-1rem);max-width:600px}
 }
 .hero .dots-tl{top:auto;bottom:70px;left:3%}
+
+/* Sobre mí: foto real de la doctora (reemplaza el sello con el logo) */
+.sobre-grid{grid-template-columns:.8fr 1.2fr;gap:5rem}
+.sobre-foto{position:relative;margin:0;justify-self:center;width:min(100%,380px)}
+.sobre-foto::before{content:"";position:absolute;inset:-16px 16px 16px -16px;border:1px solid var(--taupe-l);pointer-events:none}
+.sobre-foto img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.sobre-foto figcaption{position:absolute;left:-16px;bottom:28px;padding:.8rem 1.2rem;background:var(--taupe);color:#fff}
+.sobre-foto figcaption b{display:block;font-family:var(--head);font-weight:600;font-size:1.1rem;line-height:1.1}
+.sobre-foto figcaption span{font-size:.68rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.sobre-sello{display:none}
+@media (max-width:1024px){
+  .sobre-grid{grid-template-columns:1fr;gap:3.4rem}
+  .sobre-foto{width:min(100%,320px)}
+  .sobre-foto::before{inset:-12px}   /* marco simétrico en responsive */
+  .sobre-foto figcaption{left:50%;transform:translateX(-50%);bottom:-18px;white-space:nowrap;text-align:center}
+}
