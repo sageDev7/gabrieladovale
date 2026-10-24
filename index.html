@@ -26,16 +26,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,500;0,600;0,700;1,400&family=Red+Hat+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.46.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="./styles.css?v=202610241340">
+<link rel="stylesheet" href="./styles.css?v=202610241353">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LegalService",
   "name": "Dra. Dovale Gabriela",
-  "telephone": "+54 9 3487 60-3994",
+  "telephone": "+54 9 3487 69-3994",
   "email": "dradovagabriela@gmail.com",
   "address": {"@type": "PostalAddress", "streetAddress": "Soler 65", "addressLocality": "Zárate", "addressRegion": "Buenos Aires", "addressCountry": "AR"},
-  "areaServed": "Zárate",
+  "areaServed": ["Zárate", "Provincia de Buenos Aires"],
   "knowsAbout": ["Derecho de familia", "Divorcios", "Alimentos", "Régimen de comunicación", "Sucesiones", "Accidentes laborales", "Enfermedades profesionales"],
   "sameAs": ["https://www.instagram.com/dovale.gabriela.abogada/"]
 }
@@ -46,7 +46,7 @@
      enfermedades profesionales; «divorcios» sale de su flyer). Secciones obligatorias: áreas en detalle + preguntas frecuentes.
      Logo: su original en HD (logo-original-hd.png), recortado en img/logo-oscuro|claro|taupe.png.
      Fotos Pexels: familia https://images.pexels.com/photos/7951671 · laboral https://images.pexels.com/photos/14804687
-     manos https://images.pexels.com/photos/26673556 · hero https://images.pexels.com/photos/30483129 -->
+     manos https://images.pexels.com/photos/26673556 · hero https://images.pexels.com/photos/10033378 -->
 
 <!-- ============ HEADER ============ -->
 <header class="hdr" id="hdr">
@@ -153,6 +153,11 @@
         </div>
       </article>
     </div>
+    <div class="otros reveal">
+      <i class="ti ti-message-question" aria-hidden="true"></i>
+      <div><h3>¿Tu consulta es sobre otro tema?</h3><p>También podés consultarme por otras materias que no figuran acá. Atiendo en la Provincia de Buenos Aires.</p></div>
+      <a class="btn btn-line js-wa" href="#" data-msg="Hola Dra. Dovale, quisiera hacer una consulta sobre otro tema.">Consultar</a>
+    </div>
   </div>
 </section>
 
@@ -169,6 +174,7 @@
       <p class="eyebrow">Sobre mí</p>
       <h2 class="h2">Abogada independiente, <span>cerca de cada caso.</span></h2>
       <p class="lead">Tengo varios años de trayectoria profesional. Trabajo con confianza y profesionalismo, y con un acompañamiento personalizado: cada consulta tiene su tiempo, su escucha y una respuesta clara.</p>
+      <p class="matricula"><i class="ti ti-certificate" aria-hidden="true"></i><span>Matrícula T° 4 F° 290 · Colegio de Abogados de Zárate-Campana (CAZC)</span></p>
       <a class="link-arrow link-claro" href="https://www.instagram.com/dovale.gabriela.abogada/" target="_blank" rel="noopener"><i class="ti ti-brand-instagram" aria-hidden="true"></i>dovale.gabriela.abogada</a>
     </div>
   </div>
@@ -207,11 +213,16 @@
       </div>
     </div>
     <ul class="datos reveal">
-      <li><span class="ic"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i></span><div><small>WhatsApp</small><a class="js-wa" href="#" data-msg="Hola Dra. Dovale, quisiera hacer una consulta.">3487 603994</a></div></li>
+      <li><span class="ic"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i></span><div><small>WhatsApp</small><a class="js-wa" href="#" data-msg="Hola Dra. Dovale, quisiera hacer una consulta.">3487 693994</a></div></li>
       <li><span class="ic"><i class="ti ti-mail" aria-hidden="true"></i></span><div><small>Email</small><a href="mailto:dradovagabriela@gmail.com">dradovagabriela@gmail.com</a></div></li>
       <li><span class="ic"><i class="ti ti-map-pin" aria-hidden="true"></i></span><div><small>Estudio</small><span>Soler 65, Zárate</span></div></li>
+      <li><span class="ic"><i class="ti ti-map-2" aria-hidden="true"></i></span><div><small>Atención</small><span>Provincia de Buenos Aires</span></div></li>
       <li><span class="ic"><i class="ti ti-brand-instagram" aria-hidden="true"></i></span><div><small>Instagram</small><a href="https://www.instagram.com/dovale.gabriela.abogada/" target="_blank" rel="noopener">@dovale.gabriela.abogada</a></div></li>
     </ul>
+    <div class="mapa-wrap reveal">
+      <iframe class="mapa" title="Ubicación del estudio en Soler 65, Zárate" src="https://www.google.com/maps?q=Soler+65,+Z%C3%A1rate,+Buenos+Aires&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="btn btn-claro" href="https://www.google.com/maps/search/?api=1&amp;query=Soler+65+Z%C3%A1rate+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
   </div>
 </section>
 
@@ -226,13 +237,14 @@
         <img class="mono" src="./img/logo-oscuro.png" alt="" width="700" height="694" loading="lazy">
         <span><b>Dra. Dovale Gabriela</b><small>Abogada</small></span>
       </span>
-      <p>Familia, sucesiones y laboral en Zárate. Consultas virtuales o presenciales.</p>
+      <p>Familia, sucesiones y laboral en Zárate y la Provincia de Buenos Aires. Consultas virtuales o presenciales.</p>
+      <p class="ftr-mat">Mat. T° 4 F° 290 · CAZC</p>
     </div>
     <div class="ftr-col"><h4>Secciones</h4><ul><li><a href="#inicio">Inicio</a></li><li><a href="#areas">Áreas</a></li><li><a href="#sobre-mi">Sobre mí</a></li><li><a href="#preguntas">Preguntas frecuentes</a></li></ul></div>
     <div class="ftr-col"><h4>Áreas</h4><ul><li><a href="#areas">Divorcios y alimentos</a></li><li><a href="#areas">Régimen de comunicación</a></li><li><a href="#areas">Sucesiones</a></li><li><a href="#areas">Accidentes laborales</a></li></ul></div>
     <div class="ftr-col"><h4>Contacto</h4>
       <ul class="ftr-data">
-        <li><i class="ti ti-brand-whatsapp" aria-hidden="true"></i><a class="js-wa" href="#" data-msg="Hola Dra. Dovale, quisiera hacer una consulta.">3487 603994</a></li>
+        <li><i class="ti ti-brand-whatsapp" aria-hidden="true"></i><a class="js-wa" href="#" data-msg="Hola Dra. Dovale, quisiera hacer una consulta.">3487 693994</a></li>
         <li><i class="ti ti-mail" aria-hidden="true"></i><a href="mailto:dradovagabriela@gmail.com">dradovagabriela@gmail.com</a></li>
         <li><i class="ti ti-map-pin" aria-hidden="true"></i><span>Soler 65, Zárate</span></li>
       </ul>
@@ -247,6 +259,6 @@
 
 <a class="wa-float js-wa" id="waFloat" href="#" data-msg="Hola Dra. Dovale, quisiera hacer una consulta." aria-label="Escribir por WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
 
-<script src="./main.js?v=202610241340"></script>
+<script src="./main.js?v=202610241353"></script>
 </body>
 </html>

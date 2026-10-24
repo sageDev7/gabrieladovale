@@ -3,7 +3,7 @@
   "use strict";
 
   /* ---------- WhatsApp: número único; cada botón .js-wa trae su propio data-msg ---------- */
-  var WA_NUMBER = "5493487603994";
+  var WA_NUMBER = "5493487693994";
   function waUrl(msg) { return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg); }
   document.querySelectorAll(".js-wa").forEach(function (a) {
     a.href = waUrl(a.getAttribute("data-msg") || "Hola, quisiera hacer una consulta.");
