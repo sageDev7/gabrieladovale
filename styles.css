@@ -364,7 +364,7 @@ body.nav-open .mnav-ov{opacity:1;visibility:visible}
 .hero-h1 span{color:var(--taupe-l)}
 .hero-lead{color:rgba(255,255,255,.8);font-size:1.14rem}
 .hero-foto{position:absolute;top:0;right:0;bottom:0;width:50%;margin:0;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);z-index:0}
-.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:50% center}
 .hero-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(42,40,38,.55),rgba(42,40,38,.05) 45%),linear-gradient(rgba(42,40,38,.55),transparent 22%)}
 /* filo taupe que acompaña el corte diagonal */
 .hero-filo{position:absolute;z-index:1;top:0;bottom:0;right:0;width:50%;background:var(--taupe-l);clip-path:polygon(22% 0,calc(22% + 4px) 0,4px 100%,0 100%);transform:translateX(-14px);pointer-events:none}
@@ -392,10 +392,13 @@ body.nav-open .burger span{background:var(--carbon)}
 .valor-item+.valor-item{border-color:rgba(255,255,255,.2)}
 
 @media (max-width:1024px){
-  .hero{padding:calc(var(--hdr) + 2.4rem) 0 0;flex-direction:column;align-items:stretch}
+  /* 100svh fijo: texto + botones + foto entran en la primera pantalla (captura de presentación) */
+  .hero{height:100vh;height:100svh;min-height:0;padding:calc(var(--hdr) + 1.6rem) 0 0;flex-direction:column;align-items:stretch;justify-content:flex-start}
+  .hero-in{flex:none}
   .hero-txt{max-width:640px}
   .hero-in{order:1}
-  .hero-foto{order:2;position:relative;width:100%;height:340px;margin-top:3rem;clip-path:polygon(0 18%,100% 0,100% 100%,0 100%)}
+  .hero-foto{order:2;position:relative;flex:1 1 auto;width:100%;height:auto;min-height:120px;margin-top:1.8rem;clip-path:polygon(0 22%,100% 0,100% 100%,0 100%)}
+  .hero-foto img{object-position:52% 30%}
   .hero-foto::after{background:linear-gradient(rgba(42,40,38,.35),transparent 40%)}
   .hero-filo{display:none}
   .hero .shard-br{height:90px;width:50%;z-index:2}
@@ -403,8 +406,15 @@ body.nav-open .burger span{background:var(--carbon)}
 @media (max-width:768px){
   .hero-txt{margin:0 auto;text-align:center}
   .hero-h1{font-size:clamp(2.2rem,9.4vw,2.9rem)}
-  .hero-modos{justify-content:center;flex-direction:column;align-items:center}
-  .hero-foto{height:260px}
+  .hero{padding-top:calc(var(--hdr) + 1rem)}
+  .hero-modos{display:none}
+  .hero-lead{margin-top:1rem;font-size:1rem}
+  .hero-ctas{margin-top:1.4rem;gap:.7rem}
+  .hero-foto{margin-top:1.4rem}
+}
+@media (max-width:768px) and (max-height:700px){
+  .hero-lead{display:none}
+  .hero .eyebrow{margin-bottom:.6rem}
 }
 
 /* Anti modo oscuro forzado */
@@ -417,3 +427,32 @@ body.nav-open .burger span{background:var(--carbon)}
 /* títulos con más peso y menos interlineado (Axel: «muy finita y con mucho interlineado») */
 .hero-h1,.h2{font-weight:700}
 .hdr-nombre b,.mnav-logo b,.ftr-logo b{font-weight:600}
+
+/* ---------- privacidad y 404 (generar_extras.py) ---------- */
+.legal-hero{padding:calc(var(--hdr) + 5rem) 0 3.6rem;background:var(--carbon);color:#fff}
+.legal-hero .h2{color:#fff}
+.legal{padding:80px 0 120px;background:var(--bg)}
+.legal-in>*{max-width:46rem}
+.legal-date{margin-bottom:2.2rem;font-size:.85rem;font-weight:600;color:var(--taupe)}
+.legal h2{margin:2.4rem 0 .8rem;font-family:var(--head);font-size:1.45rem}
+.legal p,.legal li{color:var(--muted)}
+.legal p+p{margin-top:.8rem}
+.legal ul{display:grid;gap:.5rem;margin:.8rem 0}
+.legal li{position:relative;padding-left:1.3rem}
+.legal li::before{content:"";position:absolute;left:0;top:.8em;width:.55rem;height:1px;background:var(--taupe)}
+.nf{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:calc(var(--hdr) + 3rem) 0 4rem;background:var(--bg)}
+.nf-num{display:block;margin-bottom:1rem;font-family:var(--head);font-size:clamp(6rem,14vw,11rem);line-height:.85;color:var(--taupe)}
+.nf .lead{margin:1.2rem 0 2rem;max-width:34rem}
+.nf-ctas{display:flex;flex-wrap:wrap;gap:1rem}
+@media (max-width:768px){
+  .legal-hero{padding:calc(var(--hdr) + 3rem) 0 2.6rem;text-align:center}
+  .legal{padding:56px 0 84px}
+  .nf{text-align:center}
+  .nf .lead{margin-left:auto;margin-right:auto}
+  .nf-ctas{flex-direction:column;align-items:center}
+  .nf-ctas .btn{width:100%;max-width:300px}
+}
+
+/* privacidad / 404: segunda parte del título sin itálica, en taupe */
+.legal-hero h1 em{font-style:normal;color:var(--taupe-l)}
+.nf h1 em{font-style:normal;color:var(--taupe)}
